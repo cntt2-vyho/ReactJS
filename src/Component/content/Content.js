@@ -19,35 +19,36 @@ class Content extends Component {
     this.setState({ trangThai: 0 });
   }
 
-  renderButton = () => {
-
+  renderButton = () => { // la rang a// dung viet theo kieu arrow func á// da rua de e thu lai 
+    return (
     <div className="row">
-      <div className="btn btn-group">
-        <div className="btn btn-info" onClick={() => this.editClick()} >Edit </div>
-        <div className="btn btn-warning">Remove</div>
-      </div>
+            <div className="btn btn-group">
+            <div className="btn btn-info" onClick={this.thongbao}> Edit </div>
+            <div className="btn btn-warning"onClick={this.thongbao2}> Remove </div>
+            </div>
     </div>
-  };
-
-
-  renderForm = () => {
+    );
+}
+renderForm  = () => {
+    return (
     <div classname="row">
-      <div className="form-group">
-        <input defaultValue={this.props.tieude} type="text" name="ten" className="form-control" />
-      </div>
-      <div className="form-group">
-        <div className="btn" style={{ backgroundColor: 'black', color: 'white' }} onClick={() => this.saveClick}> Save </div>
-      </div>
+            <div className="form-group">
+            <input type="text" name="ten" className="form-control" />
+            <div className="btn btn-block btn-danger">Save</div>
+            </div>
     </div>
-  };
+    );
+}
 
-  displayCheck = () => {
+ displayCheck  = () => {
     if(this.state.trangThai===0)
     {
-      return this.renderButton();
+        return this.renderButton();
     }
-    else{ return this.renderForm();}
-  }
+    else
+        return this.renderForm();
+
+ }
 
   
   render() {
