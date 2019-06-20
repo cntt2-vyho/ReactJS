@@ -17,9 +17,11 @@ class Content extends Component {
 
   saveClick = () => {
     this.setState({ trangThai: 0 });
+    console.log(this.trunggian.value);
+
   }
 
-  renderButton = () => { // la rang a// dung viet theo kieu arrow func á// da rua de e thu lai 
+  renderButton = () => {
     return (
     <div className="row">
             <div className="btn btn-group">
@@ -33,7 +35,10 @@ renderForm  = () => {
     return (
     <div classname="row">
             <div className="form-group">
-            <input type="text" name="ten" className="form-control" />
+            <input ref={(dulieunhap) => {
+              this.trunggian = dulieunhap
+
+            }} type="text" name="ten" className="form-control" />
             <div className="btn btn-block btn-danger">Save</div>
             </div>
     </div>
@@ -68,6 +73,7 @@ renderForm  = () => {
 
                 {this.displayCheck()}
 
+                
               </div>
             </div>
           </div>
