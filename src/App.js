@@ -11,9 +11,20 @@ function App() {
     <div className="_013">
       <TopMenu/>
       <Header/>
-      <Content title="For those about to rock..." position1="order-lg-2" position2="order-lg-1" anh="img/01.jpg" trichdan="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati."/>
+      <div className="content-container">
+        <Content title="For about to rock..." anh="img/01.jpg" trichdan="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia."/>
       <Content title="We salute you!" anh="img/02.jpg" trichdan="A simple, one page website template for quickly building one page websites using Bootstrap 4."/>
-      <Content title="Let there be rock!" position1="order-lg-2" anh="img/03.jpg" trichdan="Subscribe to get updated when new Bootstrap related products arrive!"/>
+      <Content title="Let there be rock!" anh="img/03.jpg" trichdan="Subscribe to get updated when new Bootstrap related products arrive!"/>
+
+      <Content title="For about to rock..." anh="img/01.jpg" trichdan="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia."/>
+      <Content title="We salute you!" anh="img/02.jpg" trichdan="A simple, one page website template for quickly building one page websites using Bootstrap 4."/>
+      <Content title="Let there be rock!" anh="img/03.jpg" trichdan="Subscribe to get updated when new Bootstrap related products arrive!"/>
+
+      <Content title="For about to rock..." anh="img/01.jpg" trichdan="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia."/>
+      <Content title="We salute you!" anh="img/02.jpg" trichdan="A simple, one page website template for quickly building one page websites using Bootstrap 4."/>
+      <Content title="Let there be rock!" anh="img/03.jpg" trichdan="Subscribe to get updated when new Bootstrap related products arrive!"/>
+      </div>
+      
       <Footer/>
     </div>
   );
