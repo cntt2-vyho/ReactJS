@@ -40,9 +40,9 @@ class NewsItem extends Component {
             <div className="col-lg-4">
                 <div className="card-deck">
                     <div className="card">
-                        <a href={"/news/" +this.chuyenDoiURL(this.props.title) +"_"+this.props.newsId+".html" }> <img className="card-img-top" src={this.props.image} width="100%" /></a>
+                        <a href={"/details/" +this.chuyenDoiURL(this.props.name) +"."+this.props.newsId+".html" }> <img className="card-img-top" src={this.props.image} width="100%" /></a>
                         <div className="card-body">
-                            <h4 className="card-title">{this.props.title}</h4>
+                            <h4 className="card-title">{this.props.name}</h4>
                             <p style={{ textDecoration: 'none' }}>{this.props.quote}</p>
                         </div>
                     </div>

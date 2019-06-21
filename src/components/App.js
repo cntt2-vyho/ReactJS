@@ -8,7 +8,7 @@ import Details from './Details';
 import Contact from './Contact';
 import URLDirectional from '../router/URLDirectional';
 
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, NavLink } from "react-router-dom";
 
 class App extends Component {
   render() {

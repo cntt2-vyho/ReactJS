@@ -10,7 +10,7 @@ class Contact extends Component {
                             <div className="row h-100">
                                 <div className="col-lg-6 my-auto">
                                     <div className="header-content mx-auto" style={{ textAlign: 'center' }}>
-                                        <h1 className="mb-5">News Page</h1>
+                                        <h1 className="mb-5">Contact Page</h1>
                                         <a href="#download" className="btn btn-outline btn-xl js-scroll-trigger">Start Now for Free!</a>
                                     </div>
                                 </div>

@@ -55,7 +55,7 @@ class News extends Component {
                                     return  (
                                     <NewsItem key={key}
                                     newsId={value.id}
-                                         image={value.image} title={value.name}
+                                         image={value.image} name={value.name}
                                         quote={value.quote}>  
                                         </NewsItem>
                                         )}
