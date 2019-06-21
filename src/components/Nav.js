@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link , NavLink} from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, NavLink } from "react-router-dom";
 
 class Nav extends Component {
     render() {
@@ -16,21 +16,21 @@ class Nav extends Component {
                             <ul className="navbar-nav ml-auto">
                                 <li className="nav-item">
 
-                                    <NavLink to="/home" activeClassName="vycuteo"><a>Home</a></NavLink>
+                                    <NavLink to="/home">Home</NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <NavLink to="/news"><a>News</a></NavLink>
+                                    <NavLink to="/news">News</NavLink>
 
                                 </li>
                                 <li className="nav-item">
 
-                                    <NavLink to="/details"><a>Details</a></NavLink>
+                                    <NavLink to="/details">Details</NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <NavLink to="/contact"><a>Contact</a></NavLink>
+                                    <NavLink to="/contact">Contact</NavLink>
 
                                 </li>
-                                
+
                             </ul>
                         </div>
                     </div>
