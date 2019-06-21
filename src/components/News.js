@@ -5,18 +5,6 @@ import data from './data.json';
 class News extends Component {
     render() {
 
-
-        // var so = [1,3,4,5,6,9];
-        // var so2 = so.map((value, key) => value*3 +" va chi so la: " +key);
-        // console.log(so2);
-
-
-
-
-
-
-
-
         return (
             <div>
                 <div>
