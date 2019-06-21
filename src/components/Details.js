@@ -39,7 +39,7 @@ class Details extends Component {
                                 <div className="card">
                                     <div className="card-body">
                                         <h3>Meo ALD</h3>
-                                        <a href="details.html"><img src="https://icdn.dantri.com.vn/thumb_w/220/2016/1-1456290652201.jpg" width="50%" /></a>
+                                        <a href="/details"><img src="https://icdn.dantri.com.vn/thumb_w/220/2016/1-1456290652201.jpg" width="50%" /></a>
                                         <p style={{ lineHeight: '1.8' }}>Mèo Anh lông dài rất hiền lành, dễ bảo, cũng không nghịch ngợm, phá
                                           phách như nhiều giống mèo khác, không nhất thiết phải có “bạn” chơi cùng, cặc biệt chúng có
                                           thể nằm yên ổn một mình trong nhiều giờ. Có lẽ vì vậy mà mèo Anh lông dài luôn được xem là
@@ -88,7 +88,7 @@ class Details extends Component {
                                 <div className="col-lg-4">
                                     <div className="card">
                                         <div className="card-body">
-                                            <a href="details.html"><img src="https://www.bacsithuy.org/wp-content/uploads/2018/12/de-so-huu-1-chu-meo-thuan-chung-ton-bao-nhieu-tien-220x220.jpg" width="100%" /></a>
+                                            <a href="/details"><img src="https://www.bacsithuy.org/wp-content/uploads/2018/12/de-so-huu-1-chu-meo-thuan-chung-ton-bao-nhieu-tien-220x220.jpg" width="100%" /></a>
                                             <blockquote className="blockquote">
                                                 <p style={{ textDecoration: 'none' }}>Mèo tai cụp Scottish Fold có kích thước thuộc cỡ trung
                                                   bình chứ không to vĩ đại như giống
@@ -102,7 +102,7 @@ class Details extends Component {
                                 <div className="col-lg-4">
                                     <div className="card">
                                         <div className="card-body">
-                                            <a href="details.html"><img src="https://www.bacsithuy.org/wp-content/uploads/2018/12/de-so-huu-1-chu-meo-thuan-chung-ton-bao-nhieu-tien-220x220.jpg" width="100%" /></a>
+                                            <a href="/details"><img src="https://www.bacsithuy.org/wp-content/uploads/2018/12/de-so-huu-1-chu-meo-thuan-chung-ton-bao-nhieu-tien-220x220.jpg" width="100%" /></a>
                                             <blockquote className="blockquote">
                                                 <p style={{ textDecoration: 'none' }}>Mèo tai cụp Scottish Fold có kích thước thuộc cỡ trung
                                                   bình chứ không to vĩ đại như giống
@@ -116,7 +116,7 @@ class Details extends Component {
                                 <div className="col-lg-4">
                                     <div className="card">
                                         <div className="card-body">
-                                            <a href="details.html"><img src="https://www.bacsithuy.org/wp-content/uploads/2018/12/de-so-huu-1-chu-meo-thuan-chung-ton-bao-nhieu-tien-220x220.jpg" width="100%" /></a>
+                                            <a href="/details"><img src="https://www.bacsithuy.org/wp-content/uploads/2018/12/de-so-huu-1-chu-meo-thuan-chung-ton-bao-nhieu-tien-220x220.jpg" width="100%" /></a>
                                             <blockquote className="blockquote">
                                                 <p style={{ textDecoration: 'none' }}>Mèo tai cụp Scottish Fold có kích thước thuộc cỡ trung
                                                   bình chứ không to vĩ đại như giống

@@ -11,9 +11,9 @@ class URLDirectional extends Component {
         return (
                 <div>
                     <Route exact path="/home" component={Home} />
-                    <Route exact path="/news" component={News} />
-                    <Route exact path="/details" component={Details} />
-                    <Route exact path="/contact" component={Contact} />
+                    <Route path="/news" component={News} />
+                    <Route path="/details" component={Details} />
+                    <Route path="/contact" component={Contact} />
                 </div>
         );
     }

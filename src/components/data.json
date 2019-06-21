@@ -1,0 +1,44 @@
+[
+    {
+        "id" : 1,
+        "name" : "5 địa điểm đáng sợ chỉ nhìn được qua Google Maps, có cho tiền cũng không dám đến" ,
+        "quote" : "Có những nơi trên thế giới chỉ nên tồn tại trong ký ức chúng ta thông qua những bức ảnh chụp.",
+        "content" : "Google Maps là một trong những ứng dụng hữu ích nhất trong đời sống hàng ngày hiện tại, giúp tìm đường và gợi ý nhiều tính năng hỗ trợ đa dạng. Ngoài ra, người dùng còn có thể kết nối sang giao diện Google Street View để trực tiếp xem ảnh tại nơi được chọn do các xe tự động của Google tới chụp, có thêm nhiều góc nhìn cụ thể về đích đến của mình." ,
+        "image" : "https://kenh14cdn.com/2019/6/21/photo-1-1561080596645688183460.jpg" 
+    },
+    {
+        "id" : 2,
+        "name" : "Lạnh người với phương pháp giết người quá tinh vi của Việt Anh trong Mê Cung tập 18" ,
+        "quote" : "Cách thức giết người tàn nhẫn nhưng vẫn khiến cho cảnh sát bất lực trong điều tra đã cho chúng ta thấy sự xảo quyệt ...",
+        "content" : "Một mắt xích quan trọng trong vụ án mạng của Thịnh Ngựa (Duy Nam) là một tên đàn em trong băng nhóm giang hồ chuyên quản lý đường dây đánh bạc tại một biệt thự bỏ hoang. Lúc đội cảnh sát ập vao hang ổ truy bắt, thì gã và những người anh em của mình đang duy trì một buổi \"mở bát\" cực kì náo nhiệt. Một trong những tay bạc thua quá đau đã phải đặt luôn chiếc xe ô tô trị giá 20 tỷ của mình." ,
+        "image" : "https://kenh14cdn.com/2019/6/21/photo-1-15610506048491893729401.jpg" 
+    },
+    {
+        "id" : 3,
+        "name" : "Nam sinh gốc Việt là con lai Thuỵ Điển, giống hệt Kai (EXO), nổi bần bật giữa dàn trai ngoại quốc khiến hội chị em đứng ngồi không yên" ,
+        "quote" : "Tony là nam sinh mang trong mình 2 dòng máu Việt Nam và Thụy Điển, được nhiều người chú ý nhờ chiều cao nổi trội cùng ...",
+        "content" : "Chẳng phải nghiễm nhiên mà người ta có câu: \"Đẹp như con lai\" hay là hội chị em thời nay cứ rủ nhau cưới chồng ngoại quốc để sau này sinh con đẹp hơn thiên hạ. Những người mang trong mình từ 2 dòng máu trở lên thường được bạn bè gán thêm cho tính từ \"may mắn\", bởi lẽ thường cứ là con lai, họ luôn sở hữu ngoại hình nổi trội khiến nhiều người mơ ước." ,
+        "image" : "https://kenh14cdn.com/2019/6/21/6431154521189594382016004746882032603234304n-1561073143970352667603.jpg" 
+    },
+    {
+        "id" : 4,
+        "name" : "Bị chê 'cô bé đô con' nhiều quá, cuối cùng Kỳ Duyên cũng quyết tâm và giảm được tận 4kg trong 1 tuần rồi này" ,
+        "quote" : "Không còn đổ lỗi cho diện trang phục rộng, Kỳ Duyên đã âm thầm giảm cân sau khi liên tục bị chê phát tướng, tăng cân mất kiểm soát, đến hôm nay cô đã tự tin diện đầm bó sát và thông báo ép cân thành công.",
+        "content" : "Trước đây, có một thầy giáo nọ rất thích câu nói: \"Khi thượng đế đóng một cánh cửa, ngài sẽ mở ra một cánh cửa khác\". Ông cho rằng câu nói này có thể tặng cho những người đang ở trong hoàn cảnh khó khăn những tia hi vọng cần thiết." ,
+        "image" : "https://kenh14cdn.com/2019/6/21/photo-1-1561050607724339033530.png" 
+    },
+    {
+        "id" : 5,
+        "name" : "Tuyển nữ Thái Lan trắng tay về nước sau 3 thất bại liên tiếp tại vòng bảng World Cup 2019" ,
+        "quote" : "Thất bại 0-2 trước Chile ở lượt trận cuối, nữ Thái Lan kết thúc Wolrd Cup nữ 2019 với thành tích thua 3, ghi 1 bàn và thủng lưới 20 lần.",
+        "content" : "Báo Thái phản pháo báo Hàn: Tuyển Thái Lan không quan tâm đến HLV Park Hang-seo. Profile \"nữ sát thủ\" Alex Morgan vừa ghi 5 bàn hủy diệt Thái Lan ở World Cup: Nhan sắc rung động lòng người, từng phải đi phát tờ rơi kêu gọi người dân xem tuyển nữ Mỹ thi đấu " ,
+        "image" : "http://kenh14cdn.com/zoom/460_289/2019/6/21/ngang-15610690719801811587706-crop-15610699076021063112242.jpg" 
+    },
+    {
+        "id" : 6,
+        "name" : "Soái ca từng gây sốt vì cười tạo dáng khi phát hiện bị chụp trộm bây giờ ra sao?" ,
+        "quote" : "Từng gây bão MXH với loạt biểu cảm siêu cấp đáng yêu khi phát hiện bản thân mình bị chụp trộm, sau 3 năm, cuộc sống của ...",
+        "content" : "Nếu tình cờ gặp một anh đẹp trai ở đâu đó, có thể là ở một góc phố quen, có thể là trong một sự kiện âm nhạc, cũng có thể là trên xe bus hay tàu điện ngầm chẳng hạn, bạn sẽ làm gì? Tiến tới làm quen? Lén lút bám theo? Mặc kệ người ta? Trên thực tế, nếu rơi vào trường hợp như vậy, phần lớn mọi người đều chọn cách chụp lén người ta một hoặc nhiều hơn một bức ảnh rồi sau đó, người thì giữ làm của riêng, người thì tung ngay lên mạng để khoe." ,
+        "image" : "https://kenh14cdn.com/2019/6/20/006hseqojw1fbrzmnumhcj30zm0qotn4-15610478185341145406308.jpg" 
+    }
+]

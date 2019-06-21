@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
+import NewsItem from './NewsItem';
+import data from './data.json';
 
 class News extends Component {
     render() {
+        console.log(data);
         return (
             <div>
                 <div>
@@ -20,7 +23,7 @@ class News extends Component {
                                             <div className="device">
                                                 <div className="screen">
                                                     {/* Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! */}
-                                                    <img src="https://image2.tin247.com/pictures/2015/11/12/coc1447320876.jpg" className="img-fluid" alt />
+                                                    <img src="https://image2.tin247.com/pictures/2015/11/12/coc1447320876.jpg" className="img-fluid"/>
                                                 </div>
                                                 <div className="button">
                                                     {/* You can hook the "home button" to some JavaScript events or just remove it */}
@@ -35,41 +38,15 @@ class News extends Component {
                     {/* begin news */}
                     <div className="container">
                         <div className="row">
-                            <div className="col-lg-6">
-                                <div className="card">
-                                    <div className="card-body">
-                                        <a href="details.html"> <img src="https://icdn.dantri.com.vn/thumb_w/220/2016/1-1456290652201.jpg" width="100%" /></a>
-                                        <blockquote className="blockquote">
-                                            <p style={{ textDecoration: 'none' }}>Giống mèo Anh lông dài (hay ALD), giống mèo có nguồn gốc từ Anh quốc, là hậu duệ của mèo
-                                              Anh lông ngắn và mèo Ba Tư. Có lẽ vì thế mèo Anh lông dài đã được thừa hưởng rất nhiều
-                                              ưu điểm từ các cụ tổ của mình như có một bộ lông dài bóng , mượt của mèo Ba Tư cùng thân
-                                              hình chắc nịch, đầy đặn của mèo Anh lông ngắn. Điểm thu hút nhất có lẽ nằm ở cái đầu
-                                              tròn vo, tai ngắn, chân ngắn cùng đôi mắt to tròn, long lanh. Mèo Anh lông dài có nhiều
-                                              màu khác nhau như xanh xám, nâu vàng, trắng, nâu socola, đăc biệt các lớp lông có nhiều
-                                              cấp độ màu sáng khác nhau, từ nhạt tới đậm, đan xen giữa lông dài và ngắn, kết hợp với
-                                              sự phản chiếu của ánh nắng mặt trời khiến cho màu lông trở nên óng ánh, lấp lánh trông
-                                              rất đẹp mắt. Chúng có kích cỡ thuộc dạng bình thường, cao khoảng từ 25cm đến 38cm và
-                trọng lượng trung bình từ 3.2 đến 4.5 kg.</p>
-                                        </blockquote>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-6">
-                                <div className="card">
-                                    <div className="card-body">
-                                        <a href="details.html"><img src="https://www.bacsithuy.org/wp-content/uploads/2018/12/de-so-huu-1-chu-meo-thuan-chung-ton-bao-nhieu-tien-220x220.jpg" width="100%" /></a>
-                                        <blockquote className="blockquote">
-                                            <p style={{ textDecoration: 'none' }}>Mèo tai cụp Scottish Fold có kích thước thuộc cỡ trung bình chứ không to vĩ đại như giống
-                                              mèo Maine Coon, chúng nặng trung bình từ 2 – 4kg ở con cái và 3 – 6kg ở con đực. Nhìn
-                                              tổng quan chúng cũng có một thân hình mập mạp như những giống mèo Tây khác, với một cái
-                                              đầu tròn kết hợp đôi tai gãy cụp đặc trưng thì nhìn chúng không khác gì một con cú vọ. Ở
-                                              phía trên Ngân có nói mèo tai cụp Scottish chia thành dòng tai gãy và tai thẳng, trong
-                                              đó mỗi dòng lại chia tiếp thành lông ngắn và lông dài. Tuy nhiên dòng Scottish Fold lại
-                cũng được chia tiếp thành 4 cấp độ tai cụp khác nhau nữa cơ. Cụ thể như sau</p>
-                                        </blockquote>
-                                    </div>
-                                </div>
-                            </div>
+                            <NewsItem image="https://media.moitruongvadothi.vn/2019/06/21/9852/1561081761-1.jpg" title="Mùa hè 2019 xuất hiện trên Google Doodle hôm nay"
+                                quote="Năm 2019 được dự báo là năm nóng nhất lịch sử, mùa hè 2019 vì thế cũng được cho là khắc nghiệt nhất so với các năm trước."
+                                content="Newscientist cho biết, chỉ 1 tháng đầu năm mà 2019 đã xác lập 35 kỷ lục về nắng nóng và 2 kỷ lục về lạnh giá. Đơn cử, khu vực hứng chịu mức nhiệt nóng khủng khiếp nhất trong lịch sử phần lớn diễn ra ở Australia: Nhiệt độ cao kỷ lục tại Port Augusta (Australia) được ghi nhận là 49,5 độ C. Trong khi đó tại Moline (bang Illinois, Mỹ) xuống đến âm 36,1 độ C.">  </NewsItem>
+                            <NewsItem image="https://media.moitruongvadothi.vn/2019/06/21/9852/1561081760-2.jpg" title="Năm 2018, khí quyển hứng hàng chục tấn CO2."
+                                quote="Trong bối cảnh hiện nay, El Nino có thể đang bị tác động mạnh mẽ từ quá trình biến đổi khí hậu nhân tạo (cụ thể là từ các hoạt động sản xuất, giao thông, sinh hoạt của con người)."
+                                content="Các nhà khoa học khí hậu đang theo dõi chặt chẽ sự thay đổi khí hậu do con người gây ra ảnh hưởng đến El Nino và nghiên cứu xác nhận rằng các khí nhà kính do con người thải ra, như CO2, đã tác động mạnh mẽ đến sự kiện El Nino, phá hủy các rạn san hô, tạo ra hạn hán và cháy rừng tồi tệ hơn, Theweathernetwork trích dẫn nghiên cứu của các nhà khoa học."> </NewsItem>
+                            <NewsItem image="https://media.moitruongvadothi.vn/2019/06/21/9804/1561082215-tin-tuc-24h-moi-nhat-nong-nhat-hom-nay-ngay-2162019-12.jpg" title="Kỷ niệm 94 năm Ngày Báo chí cách mạng Việt Nam"
+                                quote="Hôm nay là một ngày đặc biệt đối với những người làm báo - Ngày Báo chí cách mạng Việt Nam 21/6. Chủ tịch Hồ Chí Minh đã khẳng định vai trò của người làm báo đối với đất nước và dân tộc."
+                                content="Trong suốt 94 năm qua, dưới sự lãnh đạo của Đảng, báo chí cách mạng Việt Nam luôn là lực lượng nòng cốt, giữ vai trò quan trọng trên mặt trận tư tưởng, văn hóa, đóng góp to lớn vào sự nghiệp cách mạng của Đảng, xây dựng và bảo vệ Tổ quốc; là cầu nối giữa Đảng, Nhà nước và nhân dân, tham gia giám sát, phản biện.">  </NewsItem>
                         </div>
                     </div>
                 </div>
