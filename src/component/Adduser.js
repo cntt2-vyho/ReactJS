@@ -1,11 +1,31 @@
 import React, { Component } from 'react';
 
 class Adduser extends Component {
-    render() {
-        return (
-            <div className="col-3" style={{ color: 'while' }}>
-                .<div className>
-                    <div className="card text-white bg-primary mb-3">
+    constructor(props) {
+        super(props);
+        this.state = {
+            trangThaiChinhSua : false
+        }
+    }
+
+    thayDoiTrangThai = () => {
+        this.setState({
+            trangThaiChinhSua:!this.state.trangThaiChinhSua
+        });
+    }
+    hienThiNut = () => {
+        if(this.state.trangThaiChinhSua === true) {
+             return <div className="btn btn-block btn-outline-secondary" onClick={() => this.thayDoiTrangThai()}>Cancel</div>
+        }
+        else {
+            return <div className="btn btn-block btn-outline-info" onClick={() => this.thayDoiTrangThai()}>New</div>;
+        }
+    }
+    hienThiForm = () => {
+        if(this.state.trangThaiChinhSua === true) {
+            return (
+                <div>
+                    <div className="card text-white bg-primary mb-3 mt-2">
                         <div className="card-header">Thêm mới</div>
                         <div className="card-body">
                             <div className="form-group">
@@ -33,6 +53,18 @@ class Adduser extends Component {
                         </div>
                     </div>
                 </div>
+            )
+        }
+    }
+    render() {
+        return (
+
+            
+
+            <div className="col-3" style={{ color: 'while' }}>
+                {this.hienThiNut()};
+                {this.hienThiForm()}
+                
             </div>
 
         );
