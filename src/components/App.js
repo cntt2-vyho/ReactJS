@@ -7,7 +7,6 @@ import News from './News';
 import Details from './Details';
 import Contact from './Contact';
 import URLDirectional from '../router/URLDirectional';
-
 import { BrowserRouter as Router, Route, Link, NavLink } from "react-router-dom";
 
 class App extends Component {

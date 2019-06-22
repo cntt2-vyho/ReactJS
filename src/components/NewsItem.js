@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 
 class NewsItem extends Component {
 
-    constructor(props) {
-        super(props);
-    }
 
     chuyenDoiURL = (str) => {
         str = str.toLowerCase();     
@@ -40,7 +37,7 @@ class NewsItem extends Component {
             <div className="col-lg-4">
                 <div className="card-deck">
                     <div className="card">
-                        <a href={"/details/" +this.chuyenDoiURL(this.props.name) +"."+this.props.newsId+".html" }> <img className="card-img-top" src={this.props.image} width="100%" /></a>
+                        <a href={"/details/" +this.chuyenDoiURL(this.props.name) +"."+this.props.newsId+".html" }> <img className="card-img-top" src={this.props.image} width="100%" alt="abc" /></a>
                         <div className="card-body">
                             <h4 className="card-title">{this.props.name}</h4>
                             <p style={{ textDecoration: 'none' }}>{this.props.quote}</p>

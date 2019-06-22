@@ -23,7 +23,7 @@ class News extends Component {
                                             <div className="device">
                                                 <div className="screen">
                                                     {/* Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! */}
-                                                    <img src="https://image2.tin247.com/pictures/2015/11/12/coc1447320876.jpg" className="img-fluid" />
+                                                    <img src="https://image2.tin247.com/pictures/2015/11/12/coc1447320876.jpg" className="img-fluid" alt="abc"/>
                                                 </div>
                                                 <div className="button">
                                                     {/* You can hook the "home button" to some JavaScript events or just remove it */}

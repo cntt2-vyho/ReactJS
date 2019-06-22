@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link, NavLink } from "react-router-dom";
+import Home from './Home';
+import Contact from './Contact';
+import News from './News';
+import Details from './Details';
 
 class Nav extends Component {
     render() {
@@ -21,10 +25,6 @@ class Nav extends Component {
                                 <li className="nav-item">
                                     <NavLink to="/news">News</NavLink>
 
-                                </li>
-                                <li className="nav-item">
-
-                                    <NavLink to="/details">Details</NavLink>
                                 </li>
                                 <li className="nav-item">
                                     <NavLink to="/contact">Contact</NavLink>

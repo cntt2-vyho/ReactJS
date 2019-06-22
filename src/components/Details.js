@@ -39,7 +39,7 @@ class Details extends Component {
 
 
                 {data.map((value, key) => {
-                    if (value.id == this.props.match.params.id) {
+                    if (value.id === parseInt(this.props.match.params.id)) {
                         return (
                             <div className="jumbotron jumbotron-fluid" key={key}>
                                 <div className="container">
@@ -51,6 +51,7 @@ class Details extends Component {
                             </div>
                         )
                     }
+                    else {return null; }
                 })}
 
 
@@ -64,7 +65,7 @@ class Details extends Component {
                                 {
                                     
                                     data.map((value, key) => {
-                                        if(value.id != this.props.match.params.id) {
+                                        if(value.id !== parseInt(this.props.match.params.id)  ) {
                                             if (dem <= 4) {
                                                 dem++;
                                                 return (
@@ -78,8 +79,13 @@ class Details extends Component {
     
                                                 )
                                             }
+                                            else {
+                                                return true;
+                                            }
                                         }
-
+                                        else {
+                                            return true;
+                                        }
                                     }
                                     )
                                 }
