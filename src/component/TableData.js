@@ -7,7 +7,7 @@ class TableData extends Component {
                 .<table className="table table-striped table-inverse table-hover">
                     <thead>
                         <tr>
-                            <th>NUMERICEL ORDER</th>
+                            <th>SERIAL</th>
                             <th>NAME</th>
                             <th>PHONE</th>
                             <th>ROLES</th>
