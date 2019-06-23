@@ -5,6 +5,7 @@ class Adduser extends Component {
     checkTrangThai = () => {
         if(this.props.hienThiForm === true) {
             return (
+                <div className="col" style={{ color: 'while',marginTop: '22px' }}>
                 <div className="card text-white bg-primary mb-3 mt-2">
                     <div className="card-header" style={{textAlign: 'center'}}>New</div>
                     <div className="card-body">
@@ -30,6 +31,7 @@ class Adduser extends Component {
                         </div>
                     </div>
                 </div>
+                </div>
             )
         }
     }
@@ -38,12 +40,10 @@ class Adduser extends Component {
     render() {
 
         return (
-            <div className="col-3" style={{ color: 'while' }}>
                 <div>
                     {this.checkTrangThai()}
                 </div>
                 
-            </div>
 
         );
     }

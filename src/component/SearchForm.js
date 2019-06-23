@@ -2,6 +2,23 @@ import React, { Component } from 'react';
 
 class SearchForm extends Component {
 
+    //this.props.checkConnectProps
+    constructor(props) {
+        super(props);
+        this.state = {
+            tempValue:""
+        }
+    }
+    
+
+
+    isChange = (event) => {
+        this.setState({
+            tempValue:event.target.value
+        });
+        this.props.checkConnectProps(this.state.tempValue);
+    }
+
     hienThiNut = () => {
         if(this.props.hienThiForm === true ) {
             return <div className="btn btn-block btn-outline-secondary" onClick={() => this.props.ketNoi()} >Cancel</div>
@@ -13,11 +30,12 @@ class SearchForm extends Component {
 
     render() {
         return (
-            <div className="col-9">
+            <div className="col-12">
                 <div className="form-group">
                     <div className="btn-group vy-nut1 col-9">
-                        <input type="text" className="form-control" aria-describedby="helpId" placeholder="Search something" style={{ width: '433px' }} />
-                        <div className="btn btn-info"> Search </div>
+                        <input type="text" className="form-control"  placeholder="Search name" onChange={(event) => {
+                            this.isChange(event) }} style={{ width: '650px' ,outline: 'none'}} />
+                        <div className="btn btn-info" onClick={(dl) => this.props.checkConnectProps(this.state.tempValue)}  > Search </div>
 
                     </div>
                     <div className="btn-group1 vy-nut2 col-3">
