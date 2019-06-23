@@ -1,0 +1,32 @@
+[
+    {
+        "id" : 1,
+        "name" : "Ho",
+        "tel" : "0903904127" ,
+        "permission" : 1
+    },
+    {
+        "id" : 2,
+        "name" : "Ho Ngo",
+        "tel" : "0903904127" ,
+        "permission" : 1
+    },
+    {
+        "id" : 3,
+        "name" : "Ho Ngo My",
+        "tel" : "0903904127" ,
+        "permission" : 2
+    },
+    {
+        "id" : 4,
+        "name" : "Ho Ngo My Vy",
+        "tel" : "0903904127" ,
+        "permission" : 2
+    },
+    {
+        "id" : 5,
+        "name" : "Ho My Vy",
+        "tel" : "0903904127" ,
+        "permission" : 1
+    }
+]

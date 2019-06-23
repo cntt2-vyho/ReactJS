@@ -1,7 +1,17 @@
 import React, { Component } from 'react';
+import TableDataRow from './TableDataRow';
 
 class TableData extends Component {
+
+    mappingDataUser  = () =>  this.props.dataUserProps.map((value,key)  => (
+        <TableDataRow userName={value.name} key={key} stt={key} tel={value.tel} permission = {value.permission} />
+      ))
+
+
+
     render() {
+
+        console.log(this.props.dataUserProps);
         return (
             <div className="col-9">
                 .<table className="table table-striped table-inverse table-hover">
@@ -15,62 +25,10 @@ class TableData extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Hồ Ngô Mỹ Vy</td>
-                            <td>6545645623</td>
-                            <td>Moderator</td>
-                            <td>
-                                <div className="btn btn-warning sua">
-                                    <i className="fa fa-edit    "> Sửa </i>
-                                </div>
-                                <div className="btn btn-danger xoa">
-                                    <i className="fa fa-delete    "> Xóa </i>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Hồ</td>
-                            <td>6545645623</td>
-                            <td>Moderator</td>
-                            <td>
-                                <div className="btn btn-warning sua">
-                                    <i className="fa fa-edit    "> Sửa </i>
-                                </div>
-                                <div className="btn btn-danger xoa">
-                                    <i className="fa fa-delete    "> Xóa </i>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Hồ Ngô</td>
-                            <td>6545645623</td>
-                            <td>Moderator</td>
-                            <td>
-                                <div className="btn btn-warning sua">
-                                    <i className="fa fa-edit    "> Sửa </i>
-                                </div>
-                                <div className="btn btn-danger xoa">
-                                    <i className="fa fa-delete   "> Xóa </i>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Hồ Ngô Mỹ</td>
-                            <td>6545645623</td>
-                            <td>Moderator</td>
-                            <td>
-                                <div className="btn btn-warning sua">
-                                    <i className="fa fa-edit    "> Sửa </i>
-                                </div>
-                                <div className="btn btn-danger xoa">
-                                    <i className="fa fa-delete   "> Xóa </i>
-                                </div>
-                            </td>
-                        </tr>
+
+
+                       {this.mappingDataUser()}
+
                     </tbody>
                 </table>
             </div>

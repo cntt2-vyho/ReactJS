@@ -6,15 +6,13 @@ class Adduser extends Component {
         if(this.props.hienThiForm === true) {
             return (
                 <div className="card text-white bg-primary mb-3 mt-2">
-                    <div className="card-header">Thêm mới</div>
+                    <div className="card-header" style={{textAlign: 'center'}}>New</div>
                     <div className="card-body">
                         <div className="form-group">
-                            <label htmlFor />
-                            <input type="text" className="form-control" name id aria-describedby="helpId" placeholder="Tên user" />
+                            <input type="text" className="form-control"  aria-describedby="helpId" placeholder="Tên user" />
                         </div>
                         <div className="form-group">
-                            <label htmlFor />
-                            <input type="text" className="form-control" name id aria-describedby="helpId" placeholder="Điện thoại" />
+                            <input type="text" className="form-control" aria-describedby="helpId" placeholder="Điện thoại" />
                         </div>
                         <hr />
                         <div className="form-group select-option">
