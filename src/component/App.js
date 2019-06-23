@@ -26,6 +26,24 @@ class App extends Component {
     }
 
 
+    getNewUserData = (name,tel,permission) => {
+        var item = {};
+        item.id = "";
+        item.name = name;
+        item.tel = tel;
+        item.permission = permission;
+
+        var items = this.state.data;
+        
+        items.push(item);
+
+        this.setState({
+            data:items
+        });
+        
+        
+        console.log( this.state.data);
+    }
 
     doiTrangThai = () => {
         this.setState({
@@ -40,7 +58,7 @@ class App extends Component {
                 ketQua.push(item);
             }
         });
-        console.log(ketQua);
+        //console.log(ketQua);
         return (
             <div>
                 <Header />
@@ -51,7 +69,7 @@ class App extends Component {
                                 checkConnectProps={(dl) =>this.getTextSearch(dl) }
                                 ketNoi={() => this.doiTrangThai()} hienThiForm={this.state.hienThiForm} />
                             <TableData dataUserProps={ketQua} />
-                            <AddUser hienThiForm={this.state.hienThiForm} />
+                            <AddUser add = {(name,tel,permission) => {this.getNewUserData(name,tel,permission)}} hienThiForm={this.state.hienThiForm} />
                         </div>
                     </div>
                 </div>
