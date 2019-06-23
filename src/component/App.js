@@ -26,6 +26,10 @@ class App extends Component {
 
     }
 
+    editUser= (user) => {
+        console.log('da connect');
+        console.log(user);
+    }
 
     getNewUserData = (name,tel,permission) => {
         var item = {};
@@ -69,7 +73,7 @@ class App extends Component {
                             <SearchForm
                                 checkConnectProps={(dl) =>this.getTextSearch(dl) }
                                 ketNoi={() => this.doiTrangThai()} hienThiForm={this.state.hienThiForm} />
-                            <TableData dataUserProps={ketQua} />
+                            <TableData editFun = {(user) => this.editUser(user)} dataUserProps={ketQua} />
                             <AddUser add = {(name,tel,permission) => {this.getNewUserData(name,tel,permission)}} hienThiForm={this.state.hienThiForm} />
                         </div>
                     </div>
