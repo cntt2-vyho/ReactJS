@@ -21,6 +21,17 @@ class App extends Component {
         }
     }
 
+    deleteUser = (idUser) => {
+
+        var tempData = this.state.data;
+
+        tempData = tempData.filter(item => item.id !== idUser);
+        this.setState({
+            data : tempData
+        });
+
+    }
+
     getUserInfoApp = (info) => {
         this.state.data.forEach((value, key) => {
             if(value.id === info.id) {
@@ -66,7 +77,6 @@ class App extends Component {
         });
         
         
-        console.log( this.state.data);
     }
 
     doiTrangThai = () => {
@@ -82,7 +92,6 @@ class App extends Component {
                 ketQua.push(item);
             }
         });
-        //console.log(ketQua);
         return (
             <div>
                 <Header />
@@ -96,7 +105,9 @@ class App extends Component {
                                 editUserStatus = {this.state.editUserStatus}
                                 changeEditUSerStatus = {() => {this.changeEditUSerStatus()}}
                                 userEditObject = {this.state.userEditObject} />
-                            <TableData editFun = {(user) => this.editUser(user)} dataUserProps={ketQua}
+                            <TableData
+                            deleteUser = {(idUser) => this.deleteUser(idUser)}
+                            editFun = {(user) => this.editUser(user)} dataUserProps={ketQua}
                             changeEditUSerStatus = {() => this.changeEditUSerStatus()} />
                             <AddUser add = {(name,tel,permission) => {this.getNewUserData(name,tel,permission)}} hienThiForm={this.state.hienThiForm} />
                         </div>

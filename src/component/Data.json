@@ -1,31 +1,31 @@
 [
     {
         "id" : 1,
-        "name" : "Ho",
+        "name" : "Dừa dầm trân châu",
         "tel" : "0903904127" ,
         "permission" : 1
     },
     {
         "id" : 2,
-        "name" : "Ho Ngo",
+        "name" : "Gà lắc phô mai",
         "tel" : "0903904127" ,
         "permission" : 1
     },
     {
         "id" : 3,
-        "name" : "Ho Ngo My",
+        "name" : "Hamburger",
         "tel" : "0903904127" ,
         "permission" : 2
     },
     {
         "id" : 4,
-        "name" : "Ho Ngo My Vy",
+        "name" : "Bún đậu mắm tôm",
         "tel" : "0903904127" ,
         "permission" : 2
     },
     {
         "id" : 5,
-        "name" : "Ho My Vy",
+        "name" : "Sữa tươi trân châu trắng",
         "tel" : "0903904127" ,
         "permission" : 1
     }
