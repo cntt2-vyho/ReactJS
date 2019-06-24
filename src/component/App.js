@@ -21,6 +21,15 @@ class App extends Component {
         }
     }
 
+    getUserInfoApp = (info) => {
+        this.state.data.forEach((value, key) => {
+            if(value.id === info.id) {
+                value.name = info.name;
+                value.tel = info.tel;
+                value.permission = info.permission;
+            }
+        })
+    }
     changeEditUSerStatus = () => {
         this.setState({
             editUserStatus: !this.state.editUserStatus
@@ -35,7 +44,6 @@ class App extends Component {
     }
 
     editUser= (user) => {
-        console.log('da connect');
         console.log(user);
         this.setState({
             userEditObject:user
@@ -82,6 +90,7 @@ class App extends Component {
                     <div className="container">
                         <div className="row">
                             <SearchForm
+                                getUserInfoApp = {(info) => this.getUserInfoApp(info)}
                                 checkConnectProps={(dl) =>this.getTextSearch(dl) }
                                 ketNoi={() => this.doiTrangThai()} hienThiForm={this.state.hienThiForm} 
                                 editUserStatus = {this.state.editUserStatus}
