@@ -15,8 +15,16 @@ class App extends Component {
         this.state = {
             hienThiForm: false,
             data: DataUser,
-            text: ""
+            text: "",
+            editUserStatus:false,
+            userEditObject: {}
         }
+    }
+
+    changeEditUSerStatus = () => {
+        this.setState({
+            editUserStatus: !this.state.editUserStatus
+        })
     }
 
     getTextSearch = (dl) => {
@@ -29,6 +37,9 @@ class App extends Component {
     editUser= (user) => {
         console.log('da connect');
         console.log(user);
+        this.setState({
+            userEditObject:user
+        });
     }
 
     getNewUserData = (name,tel,permission) => {
@@ -72,8 +83,12 @@ class App extends Component {
                         <div className="row">
                             <SearchForm
                                 checkConnectProps={(dl) =>this.getTextSearch(dl) }
-                                ketNoi={() => this.doiTrangThai()} hienThiForm={this.state.hienThiForm} />
-                            <TableData editFun = {(user) => this.editUser(user)} dataUserProps={ketQua} />
+                                ketNoi={() => this.doiTrangThai()} hienThiForm={this.state.hienThiForm} 
+                                editUserStatus = {this.state.editUserStatus}
+                                changeEditUSerStatus = {() => {this.changeEditUSerStatus()}}
+                                userEditObject = {this.state.userEditObject} />
+                            <TableData editFun = {(user) => this.editUser(user)} dataUserProps={ketQua}
+                            changeEditUSerStatus = {() => this.changeEditUSerStatus()} />
                             <AddUser add = {(name,tel,permission) => {this.getNewUserData(name,tel,permission)}} hienThiForm={this.state.hienThiForm} />
                         </div>
                     </div>
