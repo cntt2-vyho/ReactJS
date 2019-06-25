@@ -8,22 +8,6 @@ var oldSatate = {
     num: ["man hinh", "chuot", "ban phim"],
     editStatus: true
 }
-var reducer1 = (state = oldSatate, action) => {
-    switch (action.type) {
-        case "CHANGE_EDIT_STATUS":
-            return { ...state, editStatus: !state.editStatus };
-
-        case "ADD_NEW":
-            return { ...state, num: [...state.num, action.newItem] };
-
-        case "DELETE":
-            return { ...state, num: state.num.filter((value, i) => i !== action.index) };
-
-        default:
-            return state;
-    }
-
-}
 
 
 const allReducer = redux.combineReducers({
