@@ -14,6 +14,10 @@ class App extends Component {
         case "CHANGE_EDIT_STATUS":
           return {...state, editStatus:!state.editStatus};
           break;
+
+          case "ADD_NEW":
+          return {...state, num : [...state.num, action.newItem]};
+          break;
       
         default:
           break;
@@ -24,8 +28,10 @@ class App extends Component {
     
     var store1 = redux.createStore(reducer1);
     console.log(store1.getState());
-    store1.dispatch({type:"CHANGE_EDIT_STATUS"})
-    
+    store1.dispatch({type:"CHANGE_EDIT_STATUS"});
+    console.log(store1.getState());
+
+    store1.dispatch({type:"ADD_NEW", newItem:"CPU"})
     console.log(store1.getState());
 
     return (
