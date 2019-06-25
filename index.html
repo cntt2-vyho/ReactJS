@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #000; padding: 8px 250px">
+    <a class="navbar-brand" href="https://facebook.com">REACT</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+      aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId" style="display: inline-block !important">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0" style="float:right">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Xem danh sách</a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div id="noteList" role="tablist" aria-multiselectable="true">
+          <div class="card">
+            <div class="card-header" role="tab" id="note1-content">
+              <h5 class="mb-0">
+                <a data-toggle="collapse" data-parent="#noteList" href="#note1" aria-expanded="true"
+                  aria-controls="note1">
+                  Note 1 - 12/3/1999
+                </a>
+              </h5>
+            </div>
+            <div id="note1" class="collapse in" role="tabpanel" aria-labelledby="note1-content">
+              <div class="card-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At dolores cumque sunt qui ipsa quae blanditiis
+                quisquam error eum sit, modi inventore ea nobis facere distinctio corrupti eius optio tempore!
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" role="tab" id="note2-content">
+              <h5 class="mb-0">
+                <a data-toggle="collapse" data-parent="#noteList" href="#note2" aria-expanded="true"
+                  aria-controls="note2">
+                  HTML to JSX
+                </a>
+              </h5>
+            </div>
+            <div id="note2" class="collapse in" role="tabpanel" aria-labelledby="note2-content">
+              <div class="card-body">
+                - Sức mạnh khủng khiếp mà Facebook mang đến trong React, đó chính là mô hình DOM, làm tăng khả năng
+                trình diễn các đối tượng trên nền web một cách hiệu quả & tốc độ mượt hơn bất kì Java Script Framework
+                nào trước đây.
+                <br>- Mục đích mà Facebook nhắm đến trong React là ""Learn Once, Write Anywhere"" - Có nghĩa là sau khi
+                hoàn tất khóa học React JS, ngoài việc bạn thiết kế được layout web, bạn còn sẽ có nền tảng vững chắc để
+                tiếp cận React Native (Mobile App) mà không cần phải mất nhiều thời gian.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-4">
+        <h3>EDIT CONTENT NOTE</h3>
+        <div class="form-group">
+          <label for="noteTitle">Note's title</label>
+          <input type="text" class="form-control" name="noteTitle" id="noteTitle" aria-describedby="helpIdNoteTitle"
+            placeholder="">
+          <small id="helpIdNoteTitle" class="form-text text-muted">Điền tiêu đề dô đaiz</small>
+        </div>
+        <div class="form-group">
+          <label for="noteContent">Note's content</label>
+          <textarea type="text" class="form-control" name="noteContent" id="noteContent"
+            aria-describedby="helpIdNoteContent" placeholder=""></textarea>
+          <small id="helpIdNoteContent" class="form-text text-muted">Điền nội dung dô đaiz nữa nè </small>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Lưu</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
