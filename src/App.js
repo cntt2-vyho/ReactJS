@@ -4,9 +4,15 @@ import Nav from './Nav';
 import NoteList from './NoteList';
 import NoteForm from './NoteForm';
 import { noteData } from './firebaseConnect';
+import { connect } from 'react-redux';
 
 class App extends Component {
 
+  showNoteForm = () => {
+    if(this.props.isEdit === true) {
+      return <NoteForm/>
+    }
+  }
   render() {
     return (
       <div>
@@ -14,11 +20,17 @@ class App extends Component {
         <div className="container">
           <div className="row">
             <NoteList />
-            <NoteForm />
+            {this.showNoteForm()}
           </div>
         </div>
       </div>
     );
   }
 }
-export default App
+
+const mapStateToProps = (state, ownProps) => {
+  return {
+    isEdit: state.isEdit
+  }
+}
+export default connect(mapStateToProps)(App);
