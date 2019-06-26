@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux';
 
-export default class NoteForm extends Component {
+class NoteForm extends Component {
 
     constructor(props){
         super(props);
@@ -25,7 +26,8 @@ export default class NoteForm extends Component {
         item.title = title;
         item.content = content;
 
-        this.props.getData(item);
+        item = JSON.stringify(item);
+        this.props.addDataStore(item);
     }
 
     render() {
@@ -50,3 +52,16 @@ export default class NoteForm extends Component {
         )
     }
 }
+const mapStateToProps = (state, ownProps) => {
+    return {
+        test: state.testConnect
+    }
+}
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {
+        addDataStore: (getItem) => {
+            dispatch({type:"ADD_DATA", getItem})
+        }
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(NoteForm) ;

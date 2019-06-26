@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import * as firebase from 'firebase';
-import { noteData } from './firebaseConnect';
 import Nav from './Nav';
 import NoteList from './NoteList';
 import NoteForm from './NoteForm';
+import { noteData } from './firebaseConnect';
 
 class App extends Component {
 
@@ -16,6 +15,7 @@ class App extends Component {
   }
 
   addData =  (item) => {
+    // noteData.push(item);
     noteData.push(item);
   }
   render() {
