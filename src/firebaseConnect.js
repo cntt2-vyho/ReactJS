@@ -11,16 +11,16 @@ var firebaseConfig = {
   };
   
 
-  export const firebaseConnect = firebase.initializeApp(firebaseConfig);
+ firebase.initializeApp(firebaseConfig);
+ export const noteData =  firebase.database().ref('dataForNote');
 
-
-  var data = firebase.database().ref( 'dataForNote/note2');
+ // var data = firebase.database().ref( 'dataForNote/note2');
   // sửa dữ liệu
-  data.set({
-    id: 3,
-    title: "title cua note 2",
-    content: "hom nay tui ngu toi 10h sang"
-  })
+  // data.set({
+  //   id: 3,
+  //   title: "title cua note 2",
+  //   content: "hom nay tui ngu toi 10h sang"
+  // })
 
 
     //lấy dữ liệu
