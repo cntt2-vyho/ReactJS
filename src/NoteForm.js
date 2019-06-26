@@ -26,8 +26,9 @@ class NoteForm extends Component {
         item.title = title;
         item.content = content;
 
-        item = JSON.stringify(item);
         this.props.addDataStore(item);
+
+        
     }
 
     render() {
