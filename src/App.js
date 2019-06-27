@@ -18,7 +18,7 @@ class App extends Component {
       <div>
         <Nav />
         <div className="container">
-          <div className="row">
+          <div className="row" style={{marginTop: '20px'}}>
             <NoteList />
             {this.showNoteForm()}
           </div>

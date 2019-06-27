@@ -7,7 +7,8 @@ class NoteForm extends Component {
         super(props);
         this.state = ({
             title: '',
-            content: ''
+            content: '',
+            id:''
         })
     }
     isChange = (event) => {
@@ -22,15 +23,37 @@ class NoteForm extends Component {
 
 
     addData = (title, content) => {
-        var item = {};
+        if(this.state.id) {
+            var editObject = {};
+            editObject.id = this.state.id;
+            editObject.title = this.state.title;
+            editObject.content = this.state.content;
+
+            this.props.editDataStore(editObject);
+            this.props.changeEditStatus() ;
+        }
+        else {
+             var item = {};
         item.title = title;
         item.content = content;
 
         this.props.addDataStore(item);
+        }
+        
 
         
     }
 
+    componentWillMount() {
+        if(this.props.editItem) {
+            this.setState({
+                title: this.props.editItem.title,
+            content: this.props.editItem.content,
+            id: this.props.editItem.id
+            });
+        }
+    }
+    
     render() {
         return (
             <div className="col-4">
@@ -40,12 +63,12 @@ class NoteForm extends Component {
                 
                 <div className="form-group">
                     <label htmlFor="title">Note's title</label>
-                    <input type="text" onChange={(event)=> this.isChange(event)} className="form-control" name="title" id="title" aria-describedby="helpIdTitle"  />
+                    <input defaultValue={this.props.editItem.title} type="text" onChange={(event)=> this.isChange(event)} className="form-control" name="title" id="title" aria-describedby="helpIdTitle"  />
                     <small id="helpIdTitle" className="form-text text-muted">Điền tiêu đề dô đaiz</small>
                 </div>
                 <div className="form-group">
                     <label htmlFor="content">Note's content</label>
-                    <textarea  onChange={(event)=> this.isChange(event)} type="text" className="form-control" name="content" id="content" aria-describedby="helpIdContent" defaultValue={""} />
+                    <textarea defaultValue={this.props.editItem.content} onChange={(event)=> this.isChange(event)} type="text" className="form-control" name="content" id="content" aria-describedby="helpIdContent"/>
                     <small id="helpIdContent" className="form-text text-muted">Điền nội dung dô đaiz nữa nè </small>
                 </div>
                 <button type="reset" onClick={() => this.addData(this.state.title, this.state.content)}  className="btn btn-primary btn-block">Lưu</button></form>
@@ -55,13 +78,19 @@ class NoteForm extends Component {
 }
 const mapStateToProps = (state, ownProps) => {
     return {
-        test: state.testConnect
+        editItem:state.editItem
     }
 }
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         addDataStore: (getItem) => {
             dispatch({type:"ADD_DATA", getItem})
+        },
+        editDataStore: (getItem) => {
+            dispatch({type:"EDIT", getItem})
+        } ,
+        changeEditStatus: () => {
+            dispatch({type:"CHANGE_EDIT_STATUS"})
         }
     }
 }

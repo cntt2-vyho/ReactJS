@@ -36,7 +36,7 @@ export default class NoteList extends Component {
         if(this.state.dataFirebase) {
             return this.state.dataFirebase.map((value,key) => {
                 return (
-                    <NoteItem key={value.key} i={key} title={value.title} content={value.content} />
+                    <NoteItem key={key} i={key} title={value.title} content={value.content} note={value} />
                 )
             })
         }
