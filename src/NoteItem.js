@@ -11,6 +11,10 @@ class NoteItem extends Component {
         this.props.getEditData(this.props.note);
 
     }
+    deleteData = () => {
+        this.props.getDeleteData(this.props.note.id)
+        //console.log(this.props.note);
+    }
     render() {
         return (
             <div className="col"  style={{paddingBottom: '10px'}}>
@@ -23,7 +27,7 @@ class NoteItem extends Component {
                                 </a>
                                 <div className="btn-group float-right">
                                     <button className="btn btn-outline-info" onClick={() => this.twoAction()}  >Edit</button>
-                                    <button className="btn btn-outline-secondary">Delete</button>
+                                    <button className="btn btn-outline-secondary" onClick={()=> this.deleteData()}>Delete</button>
                                 </div>
                             </h5>
                         </div>
@@ -50,7 +54,10 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         },
         getEditData: (editObject) => {
             dispatch({type:"GET_EDIT_DATA", editObject})
-          }
+        },
+        getDeleteData: (deleteId) => {
+            dispatch({type:"DELETE", deleteId})
+        }
       }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(NoteItem) ;

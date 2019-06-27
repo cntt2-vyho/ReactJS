@@ -21,12 +21,15 @@ const allReducer = (state = noteInitialState, action) => {
 
         case "EDIT":
             noteData.child(action.getItem.id).update({
-                title : action.getItem.title,
-                content : action.getItem.content
+                title: action.getItem.title,
+                content: action.getItem.content
             })
-            console.log('da cap nhat du lieu ' +JSON.stringify( action.getItem));
-            return { ...state, editItem: {}}
+            console.log('da cap nhat du lieu ' + JSON.stringify(action.getItem));
+            return { ...state, editItem: {} }
 
+        case "DELETE":
+            noteData.child(action.deleteId).remove();
+            return state
 
         default:
             return state
