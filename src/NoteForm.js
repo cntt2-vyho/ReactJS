@@ -39,6 +39,8 @@ class NoteForm extends Component {
 
             this.props.editDataStore(editObject);
             this.props.changeEditStatus() ;
+
+            this.props.alertOn();
         }
         else {
              var item = {};
@@ -46,6 +48,8 @@ class NoteForm extends Component {
         item.content = content;
 
         this.props.addDataStore(item);
+
+        this.props.alertOn();
         }
         
 
@@ -79,7 +83,7 @@ class NoteForm extends Component {
                     <textarea defaultValue={this.props.editItem.content} onChange={(event)=> this.isChange(event)} type="text" className="form-control" name="content" id="content" aria-describedby="helpIdContent"/>
                     <small id="helpIdContent" className="form-text text-muted">Điền nội dung dô đaiz nữa nè </small>
                 </div>
-                <button type="reset" onClick={() => this.addData(this.state.title, this.state.content)}  className="btn btn-primary btn-block">Lưu</button></form>
+                <button type="reset" onClick={() => this.addData(this.state.title, this.state.content)}  className="btn btn-primary btn-block"      >Lưu</button></form>
             </div>
         )
     }
@@ -100,6 +104,12 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         } ,
         changeEditStatus: () => {
             dispatch({type:"CHANGE_EDIT_STATUS"})
+        },
+        alertOn: () => {
+            dispatch({type:"ALERT_ON"})
+        },
+        alertOff: () => {
+            dispatch({type:"ALERT_OFF"})
         }
     }
 }
