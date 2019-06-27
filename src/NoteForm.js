@@ -22,6 +22,14 @@ class NoteForm extends Component {
     }
 
 
+    printTitle = () => {
+        if(this.props.addStatus) {
+            return <h4 style={{textTransform:'uppercase'}}>Add new</h4>
+        }
+        else {
+            return <h4 style={{textTransform:'uppercase'}}>Edit Note</h4>
+        }
+    }
     addData = (title, content) => {
         if(this.state.id) {
             var editObject = {};
@@ -57,7 +65,7 @@ class NoteForm extends Component {
     render() {
         return (
             <div className="col-4">
-                <h3>EDIT CONTENT NOTE</h3>
+                {this.printTitle()}
                 <form>
 
                 
@@ -78,7 +86,8 @@ class NoteForm extends Component {
 }
 const mapStateToProps = (state, ownProps) => {
     return {
-        editItem:state.editItem
+        editItem:state.editItem,
+        addStatus :state.isAdd
     }
 }
 const mapDispatchToProps = (dispatch, ownProps) => {

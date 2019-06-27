@@ -4,7 +4,8 @@ var redux = require('redux');
 
 const noteInitialState = {
     isEdit: false,
-    editItem: {}
+    editItem: {},
+    isAdd: false
 }
 const allReducer = (state = noteInitialState, action) => {
     switch (action.type) {
@@ -15,6 +16,8 @@ const allReducer = (state = noteInitialState, action) => {
 
         case "CHANGE_EDIT_STATUS":
             return { ...state, isEdit: !state.isEdit }
+            case "CHANGE_ADD_STATUS":
+                    return { ...state, isAdd: !state.isAdd }
 
         case "GET_EDIT_DATA":
             return { ...state, editItem: action.editObject }

@@ -5,6 +5,7 @@ import NoteList from './NoteList';
 import NoteForm from './NoteForm';
 import { noteData } from './firebaseConnect';
 import { connect } from 'react-redux';
+import AlertInfo from './AlertInfo';
 
 class App extends Component {
 
@@ -17,6 +18,7 @@ class App extends Component {
     return (
       <div>
         <Nav />
+        <AlertInfo/>
         <div className="container">
           <div className="row" style={{marginTop: '20px'}}>
             <NoteList />
