@@ -6,7 +6,9 @@ const noteInitialState = {
     isEdit: false,
     editItem: {},
     isAdd: false,
-    alertShow: false
+    alertShow: false,
+    AlertContent: '',
+    AlertType:''
 }
 const allReducer = (state = noteInitialState, action) => {
     switch (action.type) {
@@ -22,7 +24,7 @@ const allReducer = (state = noteInitialState, action) => {
             return { ...state, isAdd: !state.isAdd }
 
         case "ALERT_ON":
-            return { ...state, alertShow: true }
+            return { ...state, alertShow: true , AlertContent:action.alertContent, AlertType:action.alertType}
 
         case "ALERT_OFF":
             return { ...state, alertShow: false  }

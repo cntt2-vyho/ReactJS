@@ -3,12 +3,12 @@ import { connect } from 'react-redux';
 
 class NoteForm extends Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = ({
             title: '',
             content: '',
-            id:''
+            id: ''
         })
     }
     isChange = (event) => {
@@ -16,101 +16,102 @@ class NoteForm extends Component {
         const value = event.target.value;
 
         this.setState({
-            [name]:value
+            [name]: value
         })
 
     }
 
 
     printTitle = () => {
-        if(this.props.addStatus) {
-            return <h4 style={{textTransform:'uppercase'}}>Add new</h4>
+        if (this.props.addStatus) {
+            return <h4 style={{ textTransform: 'uppercase' }}>Add new</h4>
         }
         else {
-            return <h4 style={{textTransform:'uppercase'}}>Edit Note</h4>
+            return <h4 style={{ textTransform: 'uppercase' }}>Edit Note</h4>
         }
     }
     addData = (title, content) => {
-        if(this.state.id) {
+        if (this.state.id) {
             var editObject = {};
             editObject.id = this.state.id;
             editObject.title = this.state.title;
             editObject.content = this.state.content;
 
             this.props.editDataStore(editObject);
-            this.props.changeEditStatus() ;
+            this.props.changeEditStatus();
 
-            this.props.alertOn();
+            this.props.alertOn('Success edit for note has title ', "success");
         }
         else {
-             var item = {};
-        item.title = title;
-        item.content = content;
+            var item = {};
+            item.title = title;
+            item.content = content;
 
-        this.props.addDataStore(item);
+            this.props.addDataStore(item);
 
-        this.props.alertOn();
+            this.props.alertOff("Success add note has title ", "success");
         }
-        
 
-        
+
+
     }
 
     componentWillMount() {
-        if(this.props.editItem) {
+        if (this.props.editItem) {
             this.setState({
                 title: this.props.editItem.title,
-            content: this.props.editItem.content,
-            id: this.props.editItem.id
+                content: this.props.editItem.content,
+                id: this.props.editItem.id
             });
         }
     }
-    
+
     render() {
         return (
             <div className="col-4">
                 {this.printTitle()}
                 <form>
 
-                
-                <div className="form-group">
-                    <label htmlFor="title">Note's title</label>
-                    <input defaultValue={this.props.editItem.title} type="text" onChange={(event)=> this.isChange(event)} className="form-control" name="title" id="title" aria-describedby="helpIdTitle"  />
-                    <small id="helpIdTitle" className="form-text text-muted">Điền tiêu đề dô đaiz</small>
-                </div>
-                <div className="form-group">
-                    <label htmlFor="content">Note's content</label>
-                    <textarea defaultValue={this.props.editItem.content} onChange={(event)=> this.isChange(event)} type="text" className="form-control" name="content" id="content" aria-describedby="helpIdContent"/>
-                    <small id="helpIdContent" className="form-text text-muted">Điền nội dung dô đaiz nữa nè </small>
-                </div>
-                <button type="reset" onClick={() => this.addData(this.state.title, this.state.content)}  className="btn btn-primary btn-block"      >Lưu</button></form>
+
+                    <div className="form-group">
+                        <label htmlFor="title">Note's title</label>
+                        <input defaultValue={this.props.editItem.title} type="text" onChange={(event) => this.isChange(event)} className="form-control" name="title" id="title" aria-describedby="helpIdTitle" />
+                        <small id="helpIdTitle" className="form-text text-muted">Điền tiêu đề dô đaiz</small>
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="content">Note's content</label>
+                        <textarea defaultValue={this.props.editItem.content} onChange={(event) => this.isChange(event)} type="text" className="form-control" name="content" id="content" aria-describedby="helpIdContent" />
+                        <small id="helpIdContent" className="form-text text-muted">Điền nội dung dô đaiz nữa nè </small>
+                    </div>
+                    <button type="reset" onClick={() => this.addData(this.state.title, this.state.content)} className="btn btn-primary btn-block"      >Lưu</button></form>
             </div>
         )
     }
 }
 const mapStateToProps = (state, ownProps) => {
     return {
-        editItem:state.editItem,
-        addStatus :state.isAdd
+        editItem: state.editItem,
+        addStatus: state.isAdd,
+        AlertType: state.AlertType
     }
 }
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         addDataStore: (getItem) => {
-            dispatch({type:"ADD_DATA", getItem})
+            dispatch({ type: "ADD_DATA", getItem })
         },
         editDataStore: (getItem) => {
-            dispatch({type:"EDIT", getItem})
-        } ,
-        changeEditStatus: () => {
-            dispatch({type:"CHANGE_EDIT_STATUS"})
+            dispatch({ type: "EDIT", getItem })
         },
-        alertOn: () => {
-            dispatch({type:"ALERT_ON"})
+        changeEditStatus: () => {
+            dispatch({ type: "CHANGE_EDIT_STATUS" })
+        },
+        alertOn: (alertContent, alertType) => {
+            dispatch({ type: "ALERT_ON", alertContent ,alertType})
         },
         alertOff: () => {
-            dispatch({type:"ALERT_OFF"})
+            dispatch({ type: "ALERT_OFF" })
         }
     }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(NoteForm) ;
+export default connect(mapStateToProps, mapDispatchToProps)(NoteForm);

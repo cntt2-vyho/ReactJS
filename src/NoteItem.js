@@ -14,6 +14,7 @@ class NoteItem extends Component {
     deleteData = () => {
         this.props.getDeleteData(this.props.note.id)
         //console.log(this.props.note);
+        this.props.alertOn('Success deleted note "'+ this.props.note.title + '" .', "danger");
     }
     render() {
         return (
@@ -44,7 +45,8 @@ class NoteItem extends Component {
 }
 const mapStateToProps = (state, ownProps) => {
     return {
-        editStatus: state.isEdit
+        editStatus: state.isEdit,
+        AlertType: state.AlertType
     }
 }
 const mapDispatchToProps = (dispatch, ownProps) => {
@@ -57,6 +59,12 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         },
         getDeleteData: (deleteId) => {
             dispatch({type:"DELETE", deleteId})
+        },
+        alertOn: (alertContent, alertType) => {
+            dispatch({ type: "ALERT_ON", alertContent ,alertType})
+        },
+        alertOff: () => {
+            dispatch({ type: "ALERT_OFF" })
         }
       }
 }
